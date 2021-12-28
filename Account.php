@@ -64,7 +64,7 @@ class Account implements BankAccount
         if(array_key_exists($accountNumber, $this->account) && array_key_exists($name, $this->account[$accountNumber])) {
             $this->account[$accountNumber][$name] = $this->balanceInquiry($accountNumber, $name) + $amount;
         } else {
-            throw new Exception("Account Number not exists\n");
+            throw new Exception("Invalid Account Number\n");
         }
     }
 
